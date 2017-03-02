@@ -15,8 +15,8 @@ dtk stage -n kub-cluster1
 
 cd /home/ubuntu/dtk/service/kub-cluster1
 ```
-```
 Deploy the kubernetes cluster three nodes
+```
 dtk converge
 ---
 task_id: 2147484958`
