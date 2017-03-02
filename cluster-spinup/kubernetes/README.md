@@ -48,4 +48,17 @@ dtk task-status
 +-------------------------------+-----------+--------+----------+-------------------+-------------------+
 18 rows in set
 ```
+Log into master
+```
+dtk ssh -u ubuntu master
+[INFO] You are entering SSH terminal (ubuntu@ec2-54-91-139-58.compute-1.amazonaws.com) ...
+Warning: Permanently added 'ec2-54-91-139-58.compute-1.amazonaws.com' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-64-generic x86_64)
 
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+```
