@@ -62,3 +62,9 @@ Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-64-generic x86_64)
   Get cloud support with Ubuntu Advantage Cloud Guest:
     http://www.ubuntu.com/business/services/cloud
 ```
+Tear down cluster
+```
+dtk uninstall --delete
+Are you sure you want to uninstall the infrastructure associated with 'kub-cluster1' and delete this se     rvice instance from the server? (yes|no)
+yes
+```
