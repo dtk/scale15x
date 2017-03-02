@@ -62,7 +62,7 @@ dtk task-status
 ```
 See the cluster nodes using a dtk action
 ```
-ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk exec-sync master/swarm::cluster.list_swarm_nodes
+dtk exec-sync master/swarm::cluster.list_swarm_nodes
 ========================= start 'swarm::cluster.list_swarm_nodes' =========================
 
 
@@ -89,7 +89,7 @@ STDOUT:
 ```
 Log into master mahine
 ```
-ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk ssh -u ubuntu master
+dtk ssh -u ubuntu master
 [INFO] You are entering SSH terminal (ubuntu@ec2-184-72-73-247.compute-1.amazonaws.com) ...
 Warning: Permanently added 'ec2-184-72-73-247.compute-1.amazonaws.com' (ECDSA) to the list of known hosts.
 Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-64-generic x86_64)
@@ -105,8 +105,9 @@ Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-64-generic x86_64)
 0 updates are security updates.
 
 ```
+Delete and uninstall cluster
 ```
-ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk uninstall --delete
+dtk uninstall --delete
 Are you sure you want to uninstall the infrastructure associated with 'swarm-cluster1' and delete this service instance from the server? (yes|no)
 yes
 [INFO] DTK module 'swarm-cluster1' has been uninstalled successfully.
