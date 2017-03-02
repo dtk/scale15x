@@ -1,3 +1,4 @@
+Install the swarm module
 ```
 ubuntu@ip-172-31-14-21:~$ cd dtk/modules/
 ubuntu@ip-172-31-14-21:~/dtk/modules$ mkdir swarm
@@ -14,11 +15,13 @@ Installing dependent module 'repository/epel(master)' ... Done.
 Installing dependent module 'puppetlabs/apt(master)' ... Done.
 Installing base module 'scale15-lab/swarm(0.6.0)' from dtkn catalog ... Done.
 ```
-
+Stage an instance of the kubernetes cluster
 ```
 ubuntu@ip-172-31-14-21:~/dtk/modules/swarm$ dtk stage -n swarm-cluster1
 [INFO] Service instance 'swarm-cluster1' has been created. In order to work with service instance, please navigate to: 
-
+```
+Spin up the cluster
+```
 ubuntu@ip-172-31-14-21:~/dtk/modules/swarm$ cd  /home/ubuntu/dtk/service/swarm-cluster1
 ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk converge
 ---
@@ -55,6 +58,7 @@ ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk task-status
 +-----------------------------+-----------+----------+----------+-------------------+-------------------+
 22 rows in set
 ```
+See the cluster nodes using a dtk action
 ```
 ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk exec-sync master/swarm::cluster.list_swarm_nodes
 ========================= start 'swarm::cluster.list_swarm_nodes' =========================
@@ -80,6 +84,9 @@ STDOUT:
 ------------------------------------------------------------
 
 ========================= end: 'swarm::cluster.list_swarm_nodes' (total duration: 0.2s) =========================
+```
+Log into master mahine
+```
 ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk ssh -u ubuntu master
 [INFO] You are entering SSH terminal (ubuntu@ec2-184-72-73-247.compute-1.amazonaws.com) ...
 Warning: Permanently added 'ec2-184-72-73-247.compute-1.amazonaws.com' (ECDSA) to the list of known hosts.
