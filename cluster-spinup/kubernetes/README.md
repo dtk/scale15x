@@ -1,3 +1,4 @@
+Install the kubernetes module
 ```
 ubuntu@ip-172-31-14-21:~$ cd dtk/modules/
 ubuntu@ip-172-31-14-21:~/dtk/modules$ mkdir kubernetes
@@ -6,14 +7,18 @@ ubuntu@ip-172-31-14-21:~/dtk/modules/kubernetes$ dtk module install scale15-lab/
 Installing base module 'scale15-lab/kubernetes(0.5.0)' from dtkn catalog ... Done.
 ```
 
+Create an instance of the kuberentes cluster
 ```
 ubuntu@ip-172-31-14-21:~/dtk/modules/kubernetes$ dtk stage -n kub-cluster1
 [INFO] Service instance 'kub-cluster1' has been created. In order to work with service instance, please navigate to: /home/ubuntu/dtk/service/kub-cluster1
 ubuntu@ip-172-31-14-21:~/dtk/modules/kubernetes$ cd /home/ubuntu/dtk/service/kub-cluster1
+
+Deploy the kubernetes cluster three nodes
 ubuntu@ip-172-31-14-21:~/dtk/service/kub-cluster1$ dtk converge
 ---
 task_id: 2147484958`
 ```
+Check task Status
 ```
 ubuntu@ip-172-31-14-21:~/dtk/service/kub-cluster1$ dtk task-status
 +-------------------------------+-----------+--------+----------+-------------------+-------------------+
