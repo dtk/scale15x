@@ -1,9 +1,10 @@
 Install the swarm module
 ```
-ubuntu@ip-172-31-14-21:~$ cd dtk/modules/
-ubuntu@ip-172-31-14-21:~/dtk/modules$ mkdir swarm
-ubuntu@ip-172-31-14-21:~/dtk/modules$ cd swarm/
-ubuntu@ip-172-31-14-21:~/dtk/modules/swarm$ dtk module install scale15-lab/swarm
+cd dtk/modules/
+mkdir swarm
+cd swarm/
+dtk module install scale15-lab/swarm
+
 [INFO] Getting dependent module info for 'scale15-lab/swarm(0.6.0)' from dtkn catalog ...
 [INFO] Installing dependent modules from dtkn catalog ...
 Installing dependent module 'dtk-provider/ruby-provider(master)' ... Done.
@@ -17,13 +18,13 @@ Installing base module 'scale15-lab/swarm(0.6.0)' from dtkn catalog ... Done.
 ```
 Stage an instance of the kubernetes cluster
 ```
-ubuntu@ip-172-31-14-21:~/dtk/modules/swarm$ dtk stage -n swarm-cluster1
+dtk stage -n swarm-cluster1
 [INFO] Service instance 'swarm-cluster1' has been created. In order to work with service instance, please navigate to: 
 ```
 Spin up the cluster
 ```
-ubuntu@ip-172-31-14-21:~/dtk/modules/swarm$ cd  /home/ubuntu/dtk/service/swarm-cluster1
-ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk converge
+cd  /home/ubuntu/dtk/service/swarm-cluster1
+dtk converge
 ---
 task_id: 2147486222
 
