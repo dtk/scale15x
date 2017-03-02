@@ -1,3 +1,7 @@
+Inside the kubernetes master node
+
+Following getting started with https://github.com/fission/fission
+using localhost as service endpoint
 ```
 ubuntu@ip-172-31-14-21:~/dtk/service/kub-cluster1$ dtk ssh master
 [INFO] You are entering SSH terminal (ubuntu@ec2-204-236-209-19.compute-1.amazonaws.com) ...
