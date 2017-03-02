@@ -29,8 +29,9 @@ dtk converge
 task_id: 2147486222
 
 ```
+Can track bring up of cluster using 'dtk task-status' or 'dtk task-status -m refresh'
 ```
-ubuntu@ip-172-31-14-21:~/dtk/service/swarm-cluster1$ dtk task-status
+dtk task-status
 +-----------------------------+-----------+----------+----------+-------------------+-------------------+
 | TASK TYPE                   | STATUS    | NODE     | DURATION | STARTED AT        | ENDED AT          |
 +-----------------------------+-----------+----------+----------+-------------------+-------------------+
